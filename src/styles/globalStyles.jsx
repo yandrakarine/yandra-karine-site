@@ -9,7 +9,7 @@ export default createGlobalStyle`
         padding: 0;
     }
     html * {
-        font-family: sans-serif;
+        font-family: 'Rubik',sans-serif;
     }
 
     body {
