@@ -1,11 +1,18 @@
+import { Sidebar } from "../components/Sidebar";
 import GlobalStyle from "../styles/globalStyles";
+import { Content, Main } from "./style";
+import "../fontawesome";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <GlobalStyle />
-      <h1>Hello, Yandra!</h1>
-    </div>
+      <Main>
+        <Sidebar>
+          <Content></Content>
+        </Sidebar>
+      </Main>
+    </>
   );
 }
 
