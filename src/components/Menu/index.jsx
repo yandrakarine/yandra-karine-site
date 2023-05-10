@@ -1,16 +1,23 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { MenuItem, MenuList } from "./style";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { MenuItem, MenuList } from './style';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Menu = ({ menuItemsList }) => {
-  console.log("🚀 ~~ menuItemsList", menuItemsList);
+  const navigation = useNavigate();
+  const { pathname: currentRoute } = useLocation();
+  console.log(currentRoute);
+
   return (
     <MenuList>
       {menuItemsList.map(({ itemIcon, itemRoute, itemTitle }) => (
-        <MenuItem key={Math.random()}>
+        <MenuItem key={Math.random()} onClick={() => navigation(itemRoute)}>
           <FontAwesomeIcon
             icon={itemIcon}
-            style={{ color: "white" }} // aqui vai mudar de acordo com o theme(ligth:dark)
-            size="xl"
+            style={{ color: 'white' }} // aqui vai mudar de acordo com o theme(ligth:dark)
+            size='2x'
+            cursor='pointer'
+            title={itemTitle}
+            opacity={currentRoute !== itemRoute ? 0.4 : 100}
           />
         </MenuItem>
       ))}
