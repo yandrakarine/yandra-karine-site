@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  color: #fff;
+  color: #000;
 `;
+
+export const LinkContainer = styled.a.attrs(() => ({
+  target: '_blank',
+}))``;
