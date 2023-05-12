@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { Container } from '../../components/common';
+import { pageTransitions } from '../../styles/animations';
 
 export const Wrapper = styled(Container)`
   width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: ${pageTransitions} 500ms linear;
   /* background-color: cadetblue; */
 `;
 
