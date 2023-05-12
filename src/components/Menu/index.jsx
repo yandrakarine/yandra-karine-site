@@ -14,7 +14,8 @@ export const Menu = ({ menuItemsList }) => {
           <FontAwesomeIcon
             icon={itemIcon}
             style={{ color: 'white' }} // aqui vai mudar de acordo com o theme(ligth:dark)
-            size='2x'
+            size='xl'
+            transform={currentRoute === itemRoute ? 'grow-3' : ''}
             cursor='pointer'
             title={itemTitle}
             opacity={currentRoute !== itemRoute ? 0.4 : 100}

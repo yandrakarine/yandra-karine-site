@@ -47,7 +47,7 @@ export const Sidebar = () => {
             <FontAwesomeIcon
               icon='fa-brands fa-linkedin'
               style={{ color: 'white' }} // aqui vai mudar de acordo com o theme(ligth:dark)
-              size='2x'
+              size='xl'
               cursor='pointer'
               title='Linkedin'
             />
@@ -56,7 +56,7 @@ export const Sidebar = () => {
             <FontAwesomeIcon
               icon='fa-brands fa-github'
               style={{ color: 'white' }} // aqui vai mudar de acordo com o theme(ligth:dark)
-              size='2x'
+              size='xl'
               cursor='pointer'
               title='Github'
             />
