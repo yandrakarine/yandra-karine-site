@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  color: #000;
+  color: #2f2b55;
 `;
 
 export const LinkContainer = styled.a.attrs(() => ({
