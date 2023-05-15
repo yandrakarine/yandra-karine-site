@@ -8,7 +8,6 @@ export const Wrapper = styled(Container)`
   align-items: center;
   justify-content: center;
   animation: ${pageTransitions} 500ms linear;
-  /* background-color: cadetblue; */
 `;
 
 export const PageContent = styled(Container)`
@@ -21,7 +20,6 @@ export const PageContent = styled(Container)`
 export const Welcome = styled.h1`
   margin: 3rem;
   padding-bottom: 0.5rem;
-  /* border-bottom: 2px solid aquamarine; // aqui a cor vai mudar com o tema */
   border-bottom: 2px solid #9b4f8a;
   color: #2f2b55;
 `;
@@ -37,24 +35,28 @@ export const HomeAvatar = styled(Container)`
 
 export const MyName = styled.h2`
   font-weight: bold;
-  color: #353252; // --title-color
+  color: #353252;
 `;
 
 export const MyDescriptionJob = styled.h3`
   text-align: center;
-  margin-bottom: 3rem;
-  color: #5e5c7f; // --text-color
+  margin-bottom: 0.5rem;
+  color: #5e5c7f;
 `;
 
 export const AboutMeTitle = styled.h2`
   margin-bottom: 1rem;
-  color: #353252; // --title-color
+  color: #353252;
 `;
 
 export const MySumary = styled.p`
   text-align: center;
   width: 50rem;
-  color: #5e5c7f; // --text-color
+  color: #5e5c7f;
 `;
 
-export const HomeSocialRow = styled(Container)``; // para colocar as redes sociais - linkedin & github
+export const HomeToolsAndLAnguagesRow = styled.div`
+  display: flex;
+  margin-bottom: 3rem;
+  gap: 0.8rem;
+`;
