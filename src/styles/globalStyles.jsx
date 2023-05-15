@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 // criando um estulo global: removendo default margin and paddings dos navegadores
 export default createGlobalStyle`
     *,
@@ -9,7 +9,7 @@ export default createGlobalStyle`
         padding: 0;
     }
     html * {
-        font-family: 'Rubik',sans-serif;
+        font-family: 'Poppins',sans-serif;
     }
 
     body {
