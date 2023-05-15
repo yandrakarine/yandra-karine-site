@@ -11,7 +11,7 @@ export const Wrapper = styled(Container)`
   animation: ${pageTransitions} 500ms linear;
 `;
 
-// Título da página - Experiências
+// Page Title - Experiences
 export const PageTitle = styled.h1`
   text-align: center;
   margin-bottom: 2rem;

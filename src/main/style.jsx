@@ -11,5 +11,5 @@ export const Main = styled(Container)`
 export const Content = styled(Container)`
   width: 100%;
   height: 100%;
-  background: #f9f7fd; // vai mudar de acordo com o tema
+  background: #f9f7fd;
 `;

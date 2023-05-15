@@ -13,7 +13,7 @@ export const Menu = ({ menuItemsList }) => {
         <MenuItem key={Math.random()} onClick={() => navigation(itemRoute)}>
           <FontAwesomeIcon
             icon={itemIcon}
-            style={{ color: 'white' }} // aqui vai mudar de acordo com o theme(ligth:dark)
+            style={{ color: 'white' }}
             size='xl'
             transform={currentRoute === itemRoute ? 'grow-3' : ''}
             cursor='pointer'

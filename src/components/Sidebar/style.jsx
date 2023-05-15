@@ -10,7 +10,6 @@ export const Wrapper = styled.nav`
   background: #2f2b55;
   padding: 2rem 0;
 `;
-// background: #9b4f8a;
 
 export const Profile = styled(Container)`
   display: flex;
