@@ -3,6 +3,7 @@ import feedbackWidget from '../assets/feedbackWidget.png';
 import financialControl from '../assets/financialControl.png';
 import storeInventory from '../assets/storeInventory.png';
 import pokedex from '../assets/pokedex.png';
+import avatarYandraProfile from '../assets/avatarYandraProfile.png'
 
 export const RoutesENUM = {
     HOME: "/home",
@@ -13,6 +14,20 @@ export const RoutesENUM = {
 export const Contacts = {
     LINKEDIN_URL: "https://www.linkedin.com/in/yandra-karine-lima-4183b4143/",
     GITHUB_URL: "https://github.com/yandrakarine"
+}
+
+export const profileContent = {
+  myName: 'Yandra Karine',
+  myJobDescription: 'Frontend Developer'
+}
+
+export const homeApresentation = {
+  welcomeText: 'Olá, Mundo!',
+  myAvatarImage: avatarYandraProfile,
+  myName: 'Yandra Karine',
+  myJobDescription: 'Desenvolvedora frontend com React.js',
+  aboutMeTitle: 'Sobre mim',
+  aboutMeSummary: 'Olá! Este site é o meu currículo e aqui você poderá acompanhar a tragetória de uma pessoa que está muito feliz em ter entrado de cabeça no mundo do desenvolvimento de software após transição de carreira. Acredito firmemente que a teoria só ganha vida quando colocada em prática, por tanto, por meio do desenvolvimento de projetos pessoais e dos projetos nos estágios onde atuei pude aplicar os conceitos que estudo em situações reais de forma eficiente. Meu compromisso é me dedicar a aprender e aplicar conhecimento para contribuir de forma significativa para os projetos e desafios que enfrento.',
 }
 
 export const projectsList = [
@@ -48,7 +63,7 @@ export const projectsList = [
       projectTitle: 'Store inventory control',
       projectImage: storeInventory,
       projectSummary:
-        'Aplicação web para controle de inventário de uma loja onde é possível listar todos os produtos e seu preços. É possível adicionar, remover ou edita itens da lista. Feito com JavaCript, HTML e CSS.',
+        'Aplicação web para controle de inventário de uma loja onde é possível listar todos os produtos e seu preços. É possível adicionar, remover ou edita itens da lista. Feito com JavaScript, HTML e CSS.',
       repoLink: 'https://github.com/yandrakarine/store-inventory-control',
     }
   ];
