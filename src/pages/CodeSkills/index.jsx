@@ -18,6 +18,9 @@ export const CodeSkillsPage = () => {
   const carousel = useRef();
   const [width, setWidth] = useState(0);
 
+  const noMobile = window.innerWidth > 438;
+  const isDesktop = window.innerWidth > 1440;
+
   useEffect(() => {
     console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth);
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
@@ -26,15 +29,36 @@ export const CodeSkillsPage = () => {
   return (
     <Wrapper>
       <PageTitle children={'Projetos'} />
-      <ProjectsCarousel ref={carousel} as={motion.div} whileTap={{ cursor: 'grabbing' }}>
-        <ProjectsCardsRow
-          as={motion.div}
-          drag={'x'}
-          dragConstraints={{ right: 0, left: -width }}
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+      {isDesktop ? (
+        <ProjectsCarousel ref={carousel} as={motion.div} whileTap={{ cursor: 'grabbing' }}>
+          <ProjectsCardsRow
+            as={motion.div}
+            drag={'x'}
+            dragConstraints={{ right: 0, left: -width }}
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {projectsList.map(({ projectImage, projectTitle, projectSummary, repoLink }) => (
+              <ProjectCard key={Math.random()}>
+                <ProjectTitle children={projectTitle} />
+                <ProjectAvatar projectImage={projectImage} />
+                <ProjectSummary children={projectSummary} />
+                <LinkRow href={repoLink}>
+                  <FontAwesomeIcon
+                    icon='fa-brands fa-github'
+                    style={{ color: '#5e5c7f' }}
+                    size='2x'
+                    cursor='pointer'
+                    title='Ver no repositório'
+                  />
+                </LinkRow>
+              </ProjectCard>
+            ))}
+          </ProjectsCardsRow>
+        </ProjectsCarousel>
+      ) : (
+        <ProjectsCardsRow>
           {projectsList.map(({ projectImage, projectTitle, projectSummary, repoLink }) => (
             <ProjectCard key={Math.random()}>
               <ProjectTitle children={projectTitle} />
@@ -43,7 +67,7 @@ export const CodeSkillsPage = () => {
               <LinkRow href={repoLink}>
                 <FontAwesomeIcon
                   icon='fa-brands fa-github'
-                  style={{ color: '#5e5c7f' }} // aqui vai mudar de acordo com o theme(ligth:dark)
+                  style={{ color: '#5e5c7f' }}
                   size='2x'
                   cursor='pointer'
                   title='Ver no repositório'
@@ -52,7 +76,7 @@ export const CodeSkillsPage = () => {
             </ProjectCard>
           ))}
         </ProjectsCardsRow>
-      </ProjectsCarousel>
+      )}
     </Wrapper>
   );
 };
