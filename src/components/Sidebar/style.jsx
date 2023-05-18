@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Container } from '../common';
+import { device } from '../../styles/devices';
 
 export const Wrapper = styled.nav`
   display: flex;
@@ -9,6 +10,16 @@ export const Wrapper = styled.nav`
   width: 9rem;
   background: #2f2b55;
   padding: 2rem 0;
+
+  @media (${device.mobileL}) {
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    height: 2.5rem;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+  }
 `;
 
 export const Profile = styled(Container)`
@@ -17,20 +28,32 @@ export const Profile = styled(Container)`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  @media (${device.mobileL}) {
+    display: none;
+  }
 `;
 
 export const MyAvatar = styled(Container)`
   border-radius: 50%;
-  background-image: url('https://i.pinimg.com/736x/1c/ca/24/1cca24df3c875c58cf0a872350637007.jpg');
+  background-image: url(${({ avatarImage }) => avatarImage});
   width: 5rem;
   height: 5rem;
   background-size: contain;
+
+  @media (${device.mobileL}) {
+    display: none;
+  }
 `;
 
 export const MyName = styled.span`
   font-weight: bold;
   font-size: 1rem;
   color: #fff;
+
+  @media (${device.mobileL}) {
+    display: none;
+  }
 `;
 
 export const MyOccupation = styled(MyName)`
@@ -46,6 +69,12 @@ export const BottomContainer = styled(Container)`
   justify-content: space-between;
   height: 8rem;
   width: 100%;
+
+  @media (${device.mobileL}) {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
 `;
 
 export const ContactRow = styled(Container)`

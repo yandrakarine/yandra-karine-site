@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Menu } from '../Menu/index';
-import { Contacts, RoutesENUM } from '../../constants';
+import { Contacts, RoutesENUM, homeApresentation, profileContent } from '../../constants';
 import {
   Wrapper,
   Profile,
@@ -13,6 +13,8 @@ import {
 import { LinkContainer } from '../common';
 
 export const Sidebar = () => {
+  const noMobile = window.innerWidth > 438;
+
   const items = [
     {
       itemIcon: 'fa-solid fa-house',
@@ -36,33 +38,37 @@ export const Sidebar = () => {
   return (
     <Wrapper>
       <Profile>
-        <MyAvatar />
-        <MyName children='Yandra Karine' />
-        <MyOccupation children='Fluffy-stuff Developer' />
+        <MyAvatar avatarImage={homeApresentation.myAvatarImage} />
+        <MyName children={profileContent.myName} />
+        <MyOccupation children={profileContent.myJobDescription} />
       </Profile>
       <Menu menuItemsList={items} />
-      <BottomContainer>
-        <ContactRow>
-          <LinkContainer href={LINKEDIN_URL}>
-            <FontAwesomeIcon
-              icon='fa-brands fa-linkedin'
-              style={{ color: 'white' }} // aqui vai mudar de acordo com o theme(ligth:dark)
-              size='xl'
-              cursor='pointer'
-              title='Linkedin'
-            />
-          </LinkContainer>
-          <LinkContainer href={GITHUB_URL}>
-            <FontAwesomeIcon
-              icon='fa-brands fa-github'
-              style={{ color: 'white' }} // aqui vai mudar de acordo com o theme(ligth:dark)
-              size='xl'
-              cursor='pointer'
-              title='Github'
-            />
-          </LinkContainer>
-        </ContactRow>
-      </BottomContainer>
+      {noMobile ? (
+        <BottomContainer>
+          <ContactRow>
+            <LinkContainer href={LINKEDIN_URL}>
+              <FontAwesomeIcon
+                icon='fa-brands fa-linkedin'
+                style={{ color: 'white' }}
+                size='xl'
+                cursor='pointer'
+                title='Linkedin'
+              />
+            </LinkContainer>
+            <LinkContainer href={GITHUB_URL}>
+              <FontAwesomeIcon
+                icon='fa-brands fa-github'
+                style={{ color: 'white' }}
+                size='xl'
+                cursor='pointer'
+                title='Github'
+              />
+            </LinkContainer>
+          </ContactRow>
+        </BottomContainer>
+      ) : (
+        ''
+      )}
     </Wrapper>
   );
 };
