@@ -1,9 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { skills } from '../../constants';
+import { Contacts, homeApresentation, skills } from '../../constants';
 import {
   AboutMeTitle,
+  ContactContainer,
+  ContactLabel,
+  ContactRow,
+  ContactTitle,
   HomeAvatar,
   HomeToolsAndLAnguagesRow,
+  LinkContainer,
   MyDescriptionJob,
   MyName,
   MySumary,
@@ -13,29 +18,52 @@ import {
 } from './style';
 
 export const HomePage = () => {
+  const isMobile = window.innerWidth < 438;
+  const { LINKEDIN_URL, GITHUB_URL } = Contacts;
+
   return (
     <Wrapper>
-      <Welcome children={'Olá, Mundo!'} />
-      <HomeAvatar />
+      <Welcome children={homeApresentation.welcomeText} />
+      <HomeAvatar avatarImage={homeApresentation.myAvatarImage} />
       <PageContent>
-        <MyName children={'Yandra Karine'} />
-        <MyDescriptionJob children={'Desenvolvedora frontend com React.js'} />
+        <MyName children={homeApresentation.myName} />
+        <MyDescriptionJob children={homeApresentation.myJobDescription} />
         <HomeToolsAndLAnguagesRow>
           {skills.map(({ skill, icon, color }) => (
-            <FontAwesomeIcon
-              icon={icon}
-              style={{ color: color }} // aqui vai mudar de acordo com o theme(ligth:dark) '#5e5c7f'
-              size='2x'
-              title={skill}
-            />
+            <FontAwesomeIcon icon={icon} style={{ color: color }} size='2x' title={skill} />
           ))}
         </HomeToolsAndLAnguagesRow>
-        <AboutMeTitle children={'Um pouco sobre mim'} />
-        <MySumary
-          children={
-            'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.'
-          }
-        />
+        <AboutMeTitle children={homeApresentation.aboutMeTitle} />
+        <MySumary children={homeApresentation.aboutMeSummary} />
+        {isMobile ? (
+          <ContactContainer>
+            <ContactTitle children='Perfis' />
+            <ContactRow>
+              <LinkContainer href={LINKEDIN_URL}>
+                <FontAwesomeIcon
+                  icon='fa-brands fa-linkedin'
+                  style={{ color: '#0077b5' }}
+                  size='2x'
+                  cursor='pointer'
+                  title='Linkedin'
+                />
+                <ContactLabel children='Linkedin' />
+              </LinkContainer>
+              <LinkContainer href={GITHUB_URL}>
+                <FontAwesomeIcon
+                  icon='fa-brands fa-github'
+                  style={{ color: 'black' }}
+                  size='2x'
+                  cursor='pointer'
+                  title='Github'
+                />
+                <ContactLabel children='Github' />
+              </LinkContainer>
+            </ContactRow>
+          </ContactContainer>
+        ) : (
+          ''
+        )}
       </PageContent>
     </Wrapper>
   );
