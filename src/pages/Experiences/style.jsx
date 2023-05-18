@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Container } from '../../components/common';
 import { pageTransitions } from '../../styles/animations';
+import { device } from '../../styles/devices';
 
 export const Wrapper = styled(Container)`
   flex-direction: column;
@@ -9,6 +10,11 @@ export const Wrapper = styled(Container)`
   overflow-y: auto;
   width: 100%;
   animation: ${pageTransitions} 500ms linear;
+
+  @media (${device.mobileL}) {
+    padding: 1rem;
+    overflow-y: scroll;
+  }
 `;
 
 // Page Title - Experiences
@@ -24,6 +30,10 @@ export const Summary = styled.p`
   text-align: center;
   padding: 2rem;
   color: #5e5c7f;
+
+  @media (${device.mobileL}) {
+    width: 80%;
+  }
 `;
 /* ======================= Job Resume ======================================== */
 export const ResumeJob = styled(Container)`
@@ -31,6 +41,11 @@ export const ResumeJob = styled(Container)`
   align-items: center;
   justify-self: center;
   width: 600px;
+
+  @media (${device.mobileL}) {
+    flex-direction: column;
+    padding: 0.5rem 2rem;
+  }
 `;
 
 export const JobTitle = styled.h2`
@@ -48,6 +63,11 @@ export const ResponsabilitiesContainer = styled(Container)`
   align-items: center;
   margin-bottom: 3rem;
   gap: 2rem;
+
+  @media (${device.mobileL}) {
+    flex-direction: column;
+    width: 90%;
+  }
 `;
 
 export const JobResposabilityContainer = styled(Container)`
@@ -65,6 +85,13 @@ export const JobResposabilityContainer = styled(Container)`
   &:hover {
     transform: scale(1.05);
     transform: translateY(-1rem);
+  }
+
+  @media (${device.mobileL}) {
+    padding: 2rem 0;
+    transform: none;
+    transition: 0;
+    width: 70%;
   }
 `;
 

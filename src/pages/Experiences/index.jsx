@@ -23,11 +23,7 @@ export const ExperiencesPage = () => {
             <ResponsabilitiesContainer>
               {job.job_responsabilities.map(({ title, summary, icon }, index) => (
                 <JobResposabilityContainer key={index}>
-                  <FontAwesomeIcon
-                    icon={icon}
-                    style={{ color: '#5e5c7f' }} // aqui vai mudar de acordo com o theme(ligth:dark)
-                    size='3x'
-                  />
+                  <FontAwesomeIcon icon={icon} style={{ color: '#5e5c7f' }} size='3x' />
                   <ResponsabilityTitle children={title} />
                   <Summary children={summary} />
                 </JobResposabilityContainer>
