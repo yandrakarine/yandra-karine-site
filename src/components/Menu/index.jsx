@@ -5,7 +5,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 export const Menu = ({ menuItemsList }) => {
   const navigation = useNavigate();
   const { pathname: currentRoute } = useLocation();
-  console.log(currentRoute);
 
   return (
     <MenuList>
