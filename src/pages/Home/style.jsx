@@ -44,6 +44,11 @@ export const HomeAvatar = styled(Container)`
   background-size: contain;
   background-repeat: no-repeat;
 
+  @media (${device.mobileL}) {
+    min-width: 7rem;
+    min-height: 7rem;
+  }
+
   @media (${device.laptopM}) {
     margin: 0.5rem;
   }
