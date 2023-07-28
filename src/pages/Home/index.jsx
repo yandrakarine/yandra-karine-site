@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Contacts, homeApresentation, skills } from '../../constants';
+import { Contacts, skills } from '../../constants';
 import {
   AboutMeTitle,
   ContactContainer,
@@ -16,28 +16,38 @@ import {
   Welcome,
   Wrapper,
 } from './style';
+import { i18n } from '../../translate/i18n';
+import { i18nKeys } from '../../constants';
 
 export const HomePage = () => {
   const isMobile = window.innerWidth < 438;
   const { LINKEDIN_URL, GITHUB_URL } = Contacts;
 
+  const { homeApresentation, contactRowTitle } = i18nKeys;
+
   return (
     <Wrapper>
-      <Welcome children={homeApresentation.welcomeText} />
-      <HomeAvatar avatarImage={homeApresentation.myAvatarImage} />
+      <Welcome children={i18n.t(homeApresentation.welcomeText)} />
+      <HomeAvatar avatarImage={i18n.t(homeApresentation.myAvatarImage)} />
       <PageContent>
-        <MyName children={homeApresentation.myName} />
-        <MyDescriptionJob children={homeApresentation.myJobDescription} />
+        <MyName children={i18n.t(homeApresentation.myName)} />
+        <MyDescriptionJob children={i18n.t(homeApresentation.myJobDescription)} />
         <HomeToolsAndLAnguagesRow>
           {skills.map(({ skill, icon, color }) => (
-            <FontAwesomeIcon icon={icon} style={{ color: color }} size='2x' title={skill} />
+            <FontAwesomeIcon
+              key={Math.random()}
+              icon={icon}
+              style={{ color: color }}
+              size='2x'
+              title={skill}
+            />
           ))}
         </HomeToolsAndLAnguagesRow>
-        <AboutMeTitle children={homeApresentation.aboutMeTitle} />
-        <MySumary children={homeApresentation.aboutMeSummary} />
+        <AboutMeTitle children={i18n.t(homeApresentation.aboutMeTitle)} />
+        <MySumary children={i18n.t(homeApresentation.aboutMeSummary)} />
         {isMobile ? (
           <ContactContainer>
-            <ContactTitle children='Perfis' />
+            <ContactTitle children={i18n.t(contactRowTitle)} />
             <ContactRow>
               <LinkContainer href={LINKEDIN_URL}>
                 <FontAwesomeIcon
