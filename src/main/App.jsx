@@ -4,18 +4,21 @@ import GlobalStyle from '../styles/globalStyles';
 import { Content, Main } from './style';
 import { RootRouter } from '../routes';
 import '../fontawesome';
+import { StateProvider } from '../context/theme';
 
 function App() {
   return (
-    <BrowserRouter basename='/'>
-      <GlobalStyle />
-      <Main>
-        <Sidebar />
-        <Content>
-          <RootRouter />
-        </Content>
-      </Main>
-    </BrowserRouter>
+    <StateProvider>
+      <BrowserRouter basename='/'>
+        <GlobalStyle />
+        <Main>
+          <Sidebar />
+          <Content>
+            <RootRouter />
+          </Content>
+        </Main>
+      </BrowserRouter>
+    </StateProvider>
   );
 }
 
