@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Menu } from '../Menu/index';
-import { Contacts, RoutesENUM, homeApresentation, profileContent } from '../../constants';
+import { Contacts, Idiom, RoutesENUM } from '../../constants';
 import {
   Wrapper,
   Profile,
@@ -9,11 +9,23 @@ import {
   MyOccupation,
   BottomContainer,
   ContactRow,
+  TranslateRow,
+  CountryFlag,
+  SettingsIcon,
 } from './style';
+import brazilIcon from '../../assets/icons/brazil.svg';
+import usaIcon from '../../assets/icons/united-states.svg';
 import { LinkContainer } from '../common';
+import { i18n } from '../../translate/i18n';
+import { i18nKeys } from '../../constants';
+import { Link, useLocation } from 'react-router-dom';
+
+const { profileContent, homeApresentation, settingsPage } = i18nKeys;
 
 export const Sidebar = () => {
   const noMobile = window.innerWidth > 438;
+  const { enKey, ptKey, storageKey } = Idiom;
+  const { pathname: currentRoute } = useLocation();
 
   const items = [
     {
@@ -35,12 +47,20 @@ export const Sidebar = () => {
 
   const { LINKEDIN_URL, GITHUB_URL } = Contacts;
 
+  const changeIdiom = ({ newIdiomKey }) => {
+    const currentIdiomKey = localStorage.getItem(`${storageKey}`);
+    if (currentIdiomKey !== newIdiomKey) {
+      localStorage.setItem(`${storageKey}`, newIdiomKey);
+      window.location = window.location;
+    }
+  };
+
   return (
     <Wrapper>
       <Profile>
-        <MyAvatar avatarImage={homeApresentation.myAvatarImage} />
-        <MyName children={profileContent.myName} />
-        <MyOccupation children={profileContent.myJobDescription} />
+        <MyAvatar avatarImage={i18n.t(homeApresentation.myAvatarImage)} />
+        <MyName children={i18n.t(profileContent.myName)} />
+        <MyOccupation children={i18n.t(profileContent.myJobDescription)} />
       </Profile>
       <Menu menuItemsList={items} />
       {noMobile ? (
@@ -65,9 +85,32 @@ export const Sidebar = () => {
               />
             </LinkContainer>
           </ContactRow>
+          <TranslateRow>
+            <CountryFlag
+              src={brazilIcon}
+              title={i18n.t(settingsPage.portuguese)}
+              onClick={() => changeIdiom({ newIdiomKey: ptKey })}
+            />
+            <CountryFlag
+              src={usaIcon}
+              title={i18n.t(settingsPage.english)}
+              onClick={() => changeIdiom({ newIdiomKey: enKey })}
+            />
+          </TranslateRow>
         </BottomContainer>
       ) : (
-        ''
+        <Link to={RoutesENUM.SETTINGS}>
+          <SettingsIcon>
+            <FontAwesomeIcon
+              icon='fa-solid fa-gear'
+              style={{ color: 'white' }}
+              size='xl'
+              cursor='pointer'
+              title='settings'
+              opacity={currentRoute !== '/settings' ? 0.4 : 100}
+            />
+          </SettingsIcon>
+        </Link>
       )}
     </Wrapper>
   );

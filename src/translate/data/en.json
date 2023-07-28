@@ -1,0 +1,90 @@
+{
+  "experiencesPageTitle": "Experiences",
+  "codeSkillsPageTitle": "Projects",
+  "contactRowTitle": "Contact",
+  "language": "Language",
+  "settingsPage": {
+    "settingsPageTitle": "Settings",
+    "idiom": "idiom",
+    "portuguese": "Portuguese",
+    "english": "English"
+  },
+  "profileContent": {
+    "myName": "Yandra Karine",
+    "myJobDescription": "Frontend Developer"
+  },
+  "homeApresentation": {
+    "welcomeText": "Hello, World!",
+    "myName": "Yandra Karine",
+    "myJobDescription": "Frontend Developer with React.js",
+    "aboutMeTitle": "About me",
+    "aboutMeSummary": "Hello, this site is my resume and here you can follow the trajectory of a person who is very happy to have entered the world of software development after career transition. I firmly believe that theory only comes to life when put into practice, so through the development of personal projects and projects in the internships where I worked I was able to apply the concepts I study in real situations efficiently. My commitment is to dedicate myself to learning and applying knowledge to contribute meaningfully to the projects and challenges I face."
+  },
+  "projectsList": [
+    {
+      "projectTitle": "PetCare Template site",
+      "projectImage": "petCareImage",
+      "projectSummary": "A website template for veterinary services. Responsive website made with HTML, CSS and JavaScript. This project was carried out at Rocketseat's NLW 2022 event using the #MobileFirst concept.",
+      "repoLink": "https://github.com/yandrakarine/petCare-site"
+    },
+    {
+      "projectTitle": "Feedback Widget",
+      "projectImage": "feedbackWidget",
+      "projectSummary": "Tool to get feedbacks from users of a website. Made with React + Typescript and Tailwind. This project was developed at Rocketseat's NLW 2022 event.",
+      "repoLink": "https://github.com/yandrakarine/Feedback-Widget"
+    },
+    {
+      "projectTitle": "Financial Control System",
+      "projectImage": "financialControl",
+      "projectSummary": "This is a web application made with React.js for financial control. It is possible to register earnings and expenses, as well as exclude them and automatically it is possible to obtain the updated value in the panels.",
+      "repoLink": "https://github.com/yandrakarine/financial-Control-System"
+    },
+    {
+      "projectTitle": "Pokedex",
+      "projectImage": "pokedex",
+      "projectSummary": "This is a project made with JavaScript, HTML and CSS is a pokedex to show 150 original pokemóns registered using pokeAPI. A simple project to understand how an API works.",
+      "repoLink": "https://github.com/yandrakarine/pokedex"
+    },
+    {
+      "projectTitle": "Store inventory control",
+      "projectImage": "storeInventory",
+      "projectSummary": "Web application for inventory control of a store where you can list all products and their prices. You can add, remove or edit items from the list. Made with JavaScript, HTML and CSS.",
+      "repoLink": "https://github.com/yandrakarine/store-inventory-control"
+    }
+  ],
+
+  "jobs": [
+    {
+      "title": "Frontend development with React.js",
+      "resume": "I had the opportunity to work on a project in production for the company's own use using React.js. My main functions were to make improvements to the code and implement new features using mainly React Hooks.",
+      "job_responsabilities": [
+        {
+          "title": "Code improvements",
+          "summary": "Review code and make improvements to implement new features",
+          "icon": "fa-solid fa-file-code"
+        },
+        {
+          "title": "New features",
+          "summary": "Design of new screens, new components and reuse of existing components.",
+          "icon": "fa-solid fa-screwdriver-wrench"
+        }
+      ]
+    },
+    {
+      "title": "Power Platform Analyst I",
+      "resume": "During this period I worked with Microsoft low-Code tools: Sharepoint, Power Automate and Power Apps; where I could apply concepts of programming logic as well as concepts of the javaScript language in order to build solutions and automations for customers in a personalized way together with the company's development team.",
+      "job_responsabilities": [
+        {
+          "title": "Build solutions and automation",
+          "summary": "Using Microsoft's Power Platform tools I was able to create automations for document control, emails and alerts for several companies.",
+          "icon": "fa-solid fa-robot"
+        },
+        {
+          "title": "Contact with Customer",
+          "summary": "I participated in planning meetings and direct contact with clients to better understand and meet their expectations and needs in the business environment.",
+          "icon": "fa-solid fa-people-group"
+        }
+      ]
+    }
+  ]
+}

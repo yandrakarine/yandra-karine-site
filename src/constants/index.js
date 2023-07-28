@@ -1,138 +1,161 @@
-import petCareImage from '../assets/petCare.png';
-import feedbackWidget from '../assets/feedbackWidget.png';
-import financialControl from '../assets/financialControl.png';
-import storeInventory from '../assets/storeInventory.png';
-import pokedex from '../assets/pokedex.png';
-import avatarYandraProfile from '../assets/avatarYandraProfile.png'
+import petCareImage from '../assets/images/petCare.png';
+import feedbackWidget from '../assets/images/feedbackWidget.png';
+import financialControl from '../assets/images/financialControl.png';
+import storeInventory from '../assets/images/storeInventory.png';
+import pokedex from '../assets/images/pokedex.png';
+import avatarYandraProfile from '../assets/images/avatarYandraProfile.png';
 
 export const RoutesENUM = {
-    HOME: "/home",
-    EXPERIENCE: "/experience",
-    CODE_SKILLS: "/code-skills",
-}
+  HOME: '/home',
+  EXPERIENCE: '/experience',
+  CODE_SKILLS: '/code-skills',
+  SETTINGS: '/settings',
+};
 
 export const Contacts = {
-    LINKEDIN_URL: "https://www.linkedin.com/in/yandra-karine-lima-4183b4143/",
-    GITHUB_URL: "https://github.com/yandrakarine"
-}
+  LINKEDIN_URL: 'https://www.linkedin.com/in/yandra-karine-lima-4183b4143/',
+  GITHUB_URL: 'https://github.com/yandrakarine',
+};
 
-export const profileContent = {
-  myName: 'Yandra Karine',
-  myJobDescription: 'Frontend Developer'
-}
+export const Idiom = {
+  storageKey: 'i18nextLng',
+  ptKey: 'pt-BR',
+  enKey: 'en-US',
+};
 
-export const homeApresentation = {
-  welcomeText: 'Olá, Mundo!',
-  myAvatarImage: avatarYandraProfile,
-  myName: 'Yandra Karine',
-  myJobDescription: 'Desenvolvedora frontend com React.js',
-  aboutMeTitle: 'Sobre mim',
-  aboutMeSummary: 'Olá! Este site é o meu currículo e aqui você poderá acompanhar a tragetória de uma pessoa que está muito feliz em ter entrado de cabeça no mundo do desenvolvimento de software após transição de carreira. Acredito firmemente que a teoria só ganha vida quando colocada em prática, por tanto, por meio do desenvolvimento de projetos pessoais e dos projetos nos estágios onde atuei pude aplicar os conceitos que estudo em situações reais de forma eficiente. Meu compromisso é me dedicar a aprender e aplicar conhecimento para contribuir de forma significativa para os projetos e desafios que enfrento.',
-}
+export const projectsListImages = [
+  {
+    projectImage: petCareImage,
+  },
+  {
+    projectImage: feedbackWidget,
+  },
+  {
+    projectImage: financialControl,
+  },
+  {
+    projectImage: pokedex,
+  },
+  {
+    projectImage: storeInventory,
+  },
+];
 
-export const projectsList = [
+export const i18nKeys = {
+  experiencesPageTitle: 'experiencesPageTitle',
+  codeSkillsPageTitle: 'codeSkillsPageTitle',
+  contactRowTitle: 'contactRowTitle',
+  language: 'language',
+  settingsPage: {
+    settingsPageTitle: 'settingsPage.settingsPageTitle',
+    idiom: 'settingsPage.idiom',
+    portuguese: 'settingsPage.portuguese',
+    english: 'settingsPage.english',
+  },
+  profileContent: {
+    myName: 'profileContent.myName',
+    myJobDescription: 'profileContent.myJobDescription',
+  },
+  homeApresentation: {
+    welcomeText: 'homeApresentation.welcomeText',
+    myName: 'homeApresentation.myName',
+    myAvatarImage: avatarYandraProfile,
+    myJobDescription: 'homeApresentation.myJobDescription',
+    aboutMeTitle: 'homeApresentation.aboutMeTitle',
+    aboutMeSummary: 'homeApresentation.aboutMeSummary',
+  },
+  projectsList: [
     {
-      projectTitle: 'PetCare Template site',
-      projectImage: petCareImage,
-      projectSummary:
-        'Um template de website para serviços veterinários. Site Responsivo feito com HTML, CSS e JavaScript. Esse projeto foi realizado no evento NLW 2022 da Rocketseat utilizando o conceito #MobileFirst',
-      repoLink: 'https://github.com/yandrakarine/petCare-site',
+      projectTitle: 'projectsList.0.projectTitle',
+      projectImage: 'projectsList.0.projectImage',
+      projectSummary: 'projectsList.0.projectSummary',
+      repoLink: 'projectsList.0.repoLink',
     },
     {
-      projectTitle: 'Feedback Widget',
-      projectImage: feedbackWidget,
-      projectSummary:
-      'Ferramenta para obter feedbacks dos usuários de um website. Feito com React + Typescript e Tailwind. Esse projeto foi desenvolvido no evento NLW 2022 da Rocketseat.',
-      repoLink: 'https://github.com/yandrakarine/Feedback-Widget',
+      projectTitle: 'projectsList.1.projectTitle',
+      projectImage: 'projectsList.1.projectImage',
+      projectSummary: 'projectsList.1.projectSummary',
+      repoLink: 'projectsList.1.repoLink',
     },
     {
-      projectTitle: 'Financial Control System',
-      projectImage: financialControl,
-      projectSummary:
-        'Esse é uma aplicação web feita com React.js para controle financeiro. É possivel registrar ganhos e despesas, assim como exclui-los e automaticamente é possível obter o valor atualizado nos painéis.',
-      repoLink: 'https://github.com/yandrakarine/financial-Control-System',
+      projectTitle: 'projectsList.2.projectTitle',
+      projectImage: 'projectsList.2.projectImage',
+      projectSummary: 'projectsList.2.projectSummary',
+      repoLink: 'projectsList.2.repoLink',
     },
     {
-      projectTitle: 'Pokedex',
-      projectImage: pokedex,
-      projectSummary:
-        'Esse é um projeto feito com JavaScript, HTML e CSS é uma pokedex para mostrar 150 pokemóns originais registrados utilizando a pokeAPI. Um projeto simples para entender como uma API funciona.',
-      repoLink: 'https://github.com/yandrakarine/pokedex',
+      projectTitle: 'projectsList.3.projectTitle',
+      projectImage: 'projectsList.3.projectImage',
+      projectSummary: 'projectsList.3.projectSummary',
+      repoLink: 'projectsList.3.repoLink',
     },
     {
-      projectTitle: 'Store inventory control',
-      projectImage: storeInventory,
-      projectSummary:
-        'Aplicação web para controle de inventário de uma loja onde é possível listar todos os produtos e seu preços. É possível adicionar, remover ou edita itens da lista. Feito com JavaScript, HTML e CSS.',
-      repoLink: 'https://github.com/yandrakarine/store-inventory-control',
-    }
-  ];
-
-  export const jobs = [
+      projectTitle: 'projectsList.4.projectTitle',
+      projectImage: 'projectsList.4.projectImage',
+      projectSummary: 'projectsList.4.projectSummary',
+      repoLink: 'projectsList.4.repoLink',
+    },
+  ],
+  jobs: [
     {
-      title: 'Desenvolvimento Frontend com React.js',
-      resume:
-        'Tive a oportunidade de atuar em um projeto em produção para uso próprio da empresa utilizando React.js. Minhas principais funções eram realizar melhorias no código e implementar novas funcionalidades utilizando principalmente React Hooks.',
+      title: 'jobs.0.title',
+      resume: 'jobs.0.resume',
       job_responsabilities: [
         {
-          title: 'Melhorias no código',
-          summary:
-            'Revisar o código e realizar melhorias para implementação de novas funcionalidades',
-          icon: 'fa-solid fa-file-code',
+          title: 'jobs.0.job_responsabilities.0.title',
+          summary: 'jobs.0.job_responsabilities.0.summary',
+          icon: 'jobs.0.job_responsabilities.0.icon',
         },
         {
-          title: 'Novas funcionalidades',
-          summary:
-            'Desenho de novas telas, Novos componentes e reutilização de componentes existentes',
-          icon: 'fa-solid fa-screwdriver-wrench',
-        }
+          title: 'jobs.0.job_responsabilities.1.title',
+          summary: 'jobs.0.job_responsabilities.1.summary',
+          icon: 'jobs.0.job_responsabilities.1.icon',
+        },
       ],
     },
     {
-      title: 'Analista Power Plataform I',
-      resume:
-        'Durante esse período trabalhei com ferramentas low-Code da Microsoft: Sharepoint, Power Automate e Power Apps; onde pude aplicar conceitos de lógica de programação assim como conceitos da linguagem javaScript com o objetivo de construir soluções e automações para os clientes deforma personalizada juntamente com o time de desenvolvimento da empresa.',
+      title: 'jobs.1.title',
+      resume: 'jobs.1.resume',
       job_responsabilities: [
         {
-          title: 'Construir soluções e automações',
-          summary:
-            'Usando as ferramentas da Power Plataform da Microsoft consegui criar automações para controle de documentos, e-mails e alertas para diversas empresas.',
-          icon: 'fa-solid fa-robot',
+          title: 'jobs.1.job_responsabilities.0.title',
+          summary: 'jobs.1.job_responsabilities.0.summary',
+          icon: 'jobs.1.job_responsabilities.0.icon',
         },
         {
-          title: 'Contato com Cliente',
-          summary:
-            'Participação de reuniões de planejamento e contato direto com os clientes para melhor entender e atender suas expectativas e necessidades no ambiente empresarial.',
-          icon: 'fa-solid fa-people-group',
+          title: 'jobs.1.job_responsabilities.1.title',
+          summary: 'jobs.1.job_responsabilities.1.summary',
+          icon: 'jobs.1.job_responsabilities.1.icon',
         },
       ],
     },
-  ];
+  ],
+};
 
-
-  export const skills = [
-    {
-      skill: 'HTML5',
-      icon: 'fa-brands fa-html5',
-      color: '#e96228',
-    },
-    {
-      skill: 'CSS3',
-      icon: 'fa-brands fa-css3-alt',
-      color: '#00a8d7',
-    },
-    {
-      skill: 'JavaSript',
-      icon: 'fa-brands fa-js-square',
-      color: '#efd81d',
-    },
-    {
-      skill: 'React.js',
-      icon: 'fa-brands fa-react',
-      color: '#5ed3f3',
-    },
-    // {
-    //   skill: 'Node.js',
-    //   icon: 'fa-brands a-html5',
-    // },
-  ];
+export const skills = [
+  {
+    skill: 'HTML5',
+    icon: 'fa-brands fa-html5',
+    color: '#e96228',
+  },
+  {
+    skill: 'CSS3',
+    icon: 'fa-brands fa-css3-alt',
+    color: '#00a8d7',
+  },
+  {
+    skill: 'JavaScript',
+    icon: 'fa-brands fa-js-square',
+    color: '#efd81d',
+  },
+  {
+    skill: 'React.js',
+    icon: 'fa-brands fa-react',
+    color: '#5ed3f3',
+  },
+  {
+    skill: 'Node.js',
+    icon: 'fa-brands fa-node-js',
+    color: '#639a58',
+  },
+];

@@ -18,7 +18,8 @@ export const Wrapper = styled.nav`
     height: 2.5rem;
     width: 100%;
     padding: 2rem;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
@@ -80,4 +81,20 @@ export const BottomContainer = styled(Container)`
 export const ContactRow = styled(Container)`
   justify-content: space-evenly;
   width: 100%;
+`;
+
+export const TranslateRow = styled(ContactRow)``;
+
+export const CountryFlag = styled.img`
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+`;
+
+export const SettingsIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
 `;

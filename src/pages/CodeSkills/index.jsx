@@ -12,7 +12,8 @@ import {
   Wrapper,
 } from './style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { projectsList } from '../../constants';
+import { i18n } from '../../translate/i18n';
+import { i18nKeys, projectsListImages } from '../../constants';
 
 export const CodeSkillsPage = () => {
   const carousel = useRef();
@@ -21,6 +22,8 @@ export const CodeSkillsPage = () => {
   const noMobile = window.innerWidth > 438;
   const isDesktop = window.innerWidth > 1440;
 
+  const { projectsList, codeSkillsPageTitle } = i18nKeys;
+
   useEffect(() => {
     console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth);
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
@@ -28,7 +31,7 @@ export const CodeSkillsPage = () => {
 
   return (
     <Wrapper>
-      <PageTitle children={'Projetos'} />
+      <PageTitle children={i18n.t(codeSkillsPageTitle)} />
       {isDesktop ? (
         <ProjectsCarousel ref={carousel} as={motion.div} whileTap={{ cursor: 'grabbing' }}>
           <ProjectsCardsRow
@@ -39,12 +42,12 @@ export const CodeSkillsPage = () => {
             animate={{ x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {projectsList.map(({ projectImage, projectTitle, projectSummary, repoLink }) => (
-              <ProjectCard key={Math.random()}>
-                <ProjectTitle children={projectTitle} />
-                <ProjectAvatar projectImage={projectImage} />
-                <ProjectSummary children={projectSummary} />
-                <LinkRow href={repoLink}>
+            {projectsList.map(({ projectTitle, projectSummary, repoLink }, index) => (
+              <ProjectCard key={index}>
+                <ProjectTitle children={i18n.t(projectTitle)} />
+                <ProjectAvatar projectImage={projectsListImages[index].projectImage} />
+                <ProjectSummary children={i18n.t(projectSummary)} />
+                <LinkRow href={i18n.t(repoLink)}>
                   <FontAwesomeIcon
                     icon='fa-brands fa-github'
                     style={{ color: '#5e5c7f' }}
@@ -59,12 +62,12 @@ export const CodeSkillsPage = () => {
         </ProjectsCarousel>
       ) : (
         <ProjectsCardsRow>
-          {projectsList.map(({ projectImage, projectTitle, projectSummary, repoLink }) => (
-            <ProjectCard key={Math.random()}>
-              <ProjectTitle children={projectTitle} />
-              <ProjectAvatar projectImage={projectImage} />
-              <ProjectSummary children={projectSummary} />
-              <LinkRow href={repoLink}>
+          {projectsList.map(({ projectTitle, projectSummary, repoLink }, index) => (
+            <ProjectCard key={index}>
+              <ProjectTitle children={i18n.t(projectTitle)} />
+              <ProjectAvatar projectImage={projectsListImages[index].projectImage} />
+              <ProjectSummary children={i18n.t(projectSummary)} />
+              <LinkRow href={i18n.t(repoLink)}>
                 <FontAwesomeIcon
                   icon='fa-brands fa-github'
                   style={{ color: '#5e5c7f' }}
