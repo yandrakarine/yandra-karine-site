@@ -81,3 +81,19 @@ export const ContactRow = styled(Container)`
   justify-content: space-evenly;
   width: 100%;
 `;
+
+export const TranslateRow = styled(ContactRow)``;
+
+export const CountryFlag = styled.img`
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+`;
+
+export const SettingsIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+`;
