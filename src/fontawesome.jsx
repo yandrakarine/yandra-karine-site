@@ -7,6 +7,7 @@ import {
   faGitAlt,
   faCss3Alt,
   faHtml5,
+  faNodeJs,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faHouse,
@@ -17,6 +18,7 @@ import {
   faScrewdriverWrench,
   faRobot,
   faPeopleGroup,
+  faGear,
 } from '@fortawesome/free-solid-svg-icons';
 
 // adicionado na lib
@@ -36,4 +38,6 @@ library.add(
   faScrewdriverWrench,
   faRobot,
   faPeopleGroup,
+  faGear,
+  faNodeJs,
 );
