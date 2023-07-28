@@ -18,7 +18,8 @@ export const Wrapper = styled.nav`
     height: 2.5rem;
     width: 100%;
     padding: 2rem;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
