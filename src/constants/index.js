@@ -51,6 +51,7 @@ export const i18nKeys = {
     idiom: 'settingsPage.idiom',
     portuguese: 'settingsPage.portuguese',
     english: 'settingsPage.english',
+    theme: 'settingsPage.theme',
   },
   profileContent: {
     myName: 'profileContent.myName',
