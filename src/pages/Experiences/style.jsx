@@ -22,14 +22,14 @@ export const PageTitle = styled.h1`
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
-  color: ${({ theme }) => theme.titleSecondary}; //#2f2b55;
-  border-bottom: 2px solid ${({ theme }) => theme.titleTerciary}; //#9b4f8a;
+  color: ${({ theme }) => theme.titleSecondary};
+  border-bottom: 2px solid ${({ theme }) => theme.titleTerciary};
 `;
 
 export const Summary = styled.p`
   text-align: center;
   padding: 2rem;
-  color: ${({ theme }) => theme.textPrimary}; //#5e5c7f;
+  color: ${({ theme }) => theme.textPrimary};
 
   @media (${device.mobileL}) {
     width: 80%;
@@ -51,10 +51,10 @@ export const ResumeJob = styled(Container)`
 export const JobTitle = styled.h2`
   text-align: center;
   max-width: 400px;
-  color: ${({ theme }) => theme.titleSecondary}; //#2f2b55;
+  color: ${({ theme }) => theme.titleSecondary};
 `;
 
-/* ======================= REsponsabilities Resume ======================================== */
+/* ======================= Responsabilities Resume ======================================== */
 
 export const ResponsabilitiesContainer = styled(Container)`
   flex: 1;
@@ -78,8 +78,8 @@ export const JobResposabilityContainer = styled(Container)`
   max-width: 600px;
   transform: translateY(0rem);
   transition: 500ms;
-  background-color: ${({ theme }) => theme.bgCardColor}; //#fff;
-  box-shadow: 0px 5px 10px 0px ${({ theme }) => theme.boxShadow}; //rgb(69 67 96 / 10%);
+  background-color: ${({ theme }) => theme.bgCardColor};
+  box-shadow: 0px 5px 10px 0px ${({ theme }) => theme.boxShadow};
   border-radius: 0.3rem;
   padding: 0.8rem 0rem;
   &:hover {
@@ -99,5 +99,5 @@ export const ResponsabilityTitle = styled.h4`
   max-width: 300px;
   margin-top: 0.8rem;
   text-align: center;
-  color: ${({ theme }) => theme.titleTerciary}; //#9b4f8a;
+  color: ${({ theme }) => theme.titleTerciary};
 `;
