@@ -56,18 +56,18 @@ export const HomeAvatar = styled(Container)`
 
 export const MyName = styled.h2`
   font-weight: bold;
-  color: ${({ theme }) => theme.titlePrimary}; // #353252
+  color: ${({ theme }) => theme.titlePrimary};
 `;
 
 export const MyDescriptionJob = styled.h3`
   text-align: center;
   margin-bottom: 0.8rem;
-  color: ${({ theme }) => theme.textPrimary}; //#5e5c7f;
+  color: ${({ theme }) => theme.textPrimary};
 `;
 
 export const AboutMeTitle = styled.h2`
   margin-bottom: 1rem;
-  color: ${({ theme }) => theme.titlePrimary}; // #353252;
+  color: ${({ theme }) => theme.titlePrimary};
 
   @media (${device.mobileL}) {
     width: 70%;
@@ -81,7 +81,7 @@ export const AboutMeTitle = styled.h2`
 export const MySumary = styled.p`
   text-align: center;
   width: 50rem;
-  color: ${({ theme }) => theme.textPrimary}; //#5e5c7f;
+  color: ${({ theme }) => theme.textPrimary};
   margin-bottom: 1.5rem;
 
   @media (${device.tablet}) {
@@ -108,7 +108,7 @@ export const HomeToolsAndLAnguagesRow = styled.div`
 `;
 
 export const ContactTitle = styled.h2`
-  color: ${({ theme }) => theme.titlePrimary}; //#353252;
+  color: ${({ theme }) => theme.titlePrimary};
   margin: 1rem 0 1.5rem;
 `;
 
@@ -122,7 +122,7 @@ export const LinkContainer = styled.a.attrs(() => ({
 }))``;
 
 export const ContactLabel = styled.h5`
-  color: ${({ theme }) => theme.textPrimary}; //#5e5c7f;
+  color: ${({ theme }) => theme.textPrimary};
 `;
 
 export const ContactContainer = styled(Container)`
