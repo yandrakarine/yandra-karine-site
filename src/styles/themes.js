@@ -16,6 +16,8 @@ export default {
     bgCardColor: '#141321',
     contentIcons: '#e6edf3',
     boxShadow: '#010409',
+    linkedinIcon: '#00a8d7',
+    gitHubIcon: '#fff',
   },
   light: {
     bgSidebar: '#2f2b55',
@@ -28,5 +30,7 @@ export default {
     bgCardColor: '#ffff',
     contentIcons: '#5e5c7f',
     boxShadow: 'rgb(69 67 96 / 10%)',
+    linkedinIcon: '#0077b5',
+    gitHubIcon: '#000',
   },
 };
