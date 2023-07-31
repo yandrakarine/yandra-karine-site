@@ -4,15 +4,12 @@ import themes from '../styles/themes';
 
 const GlobalContext = createContext();
 
-// Provide state to all app
 export const StateProvider = ({ children }) => {
   const [activeTheme, setTheme] = useState('light');
-  // if has no theme selected to session set light theme
   useEffect(() => {
     const themeFromStorage = localStorage.getItem('theme') ?? 'light';
     setTheme(themeFromStorage);
   }, []);
-  // set theme to state and session storage
   const changeTheme = (newTheme) => {
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
@@ -32,7 +29,6 @@ export const StateProvider = ({ children }) => {
   );
 };
 
-// hook to get and update state
 export const useTheme = () => {
   const { theme } = useContext(GlobalContext);
   const { changeTheme, activeTheme } = theme;
