@@ -19,7 +19,6 @@ export const CodeSkillsPage = () => {
   const carousel = useRef();
   const [width, setWidth] = useState(0);
 
-  const noMobile = window.innerWidth > 438;
   const isDesktop = window.innerWidth > 1440;
 
   const { projectsList, codeSkillsPageTitle } = i18nKeys;
