@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  color: #2f2b55;
+  color: ${({ theme }) => theme.titleSecondary};
 `;
 
 export const LinkContainer = styled.a.attrs(() => ({

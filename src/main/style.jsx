@@ -18,5 +18,5 @@ export const Main = styled(Container)`
 export const Content = styled(Container)`
   width: 100%;
   height: 100%;
-  background-color: #f9f7fd;
+  background: ${({ theme }) => theme.bgContent};
 `;

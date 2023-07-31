@@ -27,8 +27,8 @@ export const PageContent = styled(Container)`
 export const Welcome = styled.h1`
   margin: 3rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #9b4f8a;
-  color: #2f2b55;
+  border-bottom: 2px solid ${({ theme }) => theme.titleTerciary};
+  color: ${({ theme }) => theme.titleSecondary};
 
   @media (${device.laptopM}) {
     margin: 1rem;
@@ -56,18 +56,18 @@ export const HomeAvatar = styled(Container)`
 
 export const MyName = styled.h2`
   font-weight: bold;
-  color: #353252;
+  color: ${({ theme }) => theme.titlePrimary};
 `;
 
 export const MyDescriptionJob = styled.h3`
   text-align: center;
   margin-bottom: 0.8rem;
-  color: #5e5c7f;
+  color: ${({ theme }) => theme.textPrimary};
 `;
 
 export const AboutMeTitle = styled.h2`
   margin-bottom: 1rem;
-  color: #353252;
+  color: ${({ theme }) => theme.titlePrimary};
 
   @media (${device.mobileL}) {
     width: 70%;
@@ -81,7 +81,7 @@ export const AboutMeTitle = styled.h2`
 export const MySumary = styled.p`
   text-align: center;
   width: 50rem;
-  color: #5e5c7f;
+  color: ${({ theme }) => theme.textPrimary};
   margin-bottom: 1.5rem;
 
   @media (${device.tablet}) {
@@ -108,7 +108,7 @@ export const HomeToolsAndLAnguagesRow = styled.div`
 `;
 
 export const ContactTitle = styled.h2`
-  color: #353252;
+  color: ${({ theme }) => theme.titlePrimary};
   margin: 1rem 0 1.5rem;
 `;
 
@@ -122,7 +122,7 @@ export const LinkContainer = styled.a.attrs(() => ({
 }))``;
 
 export const ContactLabel = styled.h5`
-  color: #5e5c7f;
+  color: ${({ theme }) => theme.textPrimary};
 `;
 
 export const ContactContainer = styled(Container)`

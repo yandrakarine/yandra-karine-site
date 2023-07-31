@@ -18,10 +18,15 @@ import {
 } from './style';
 import { i18n } from '../../translate/i18n';
 import { i18nKeys } from '../../constants';
+import theme from '../../styles/themes';
+import { useTheme } from '../../context/theme';
 
 export const HomePage = () => {
   const isMobile = window.innerWidth < 438;
+  const { activeTheme } = useTheme();
   const { LINKEDIN_URL, GITHUB_URL } = Contacts;
+
+  const { light, dark } = theme;
 
   const { homeApresentation, contactRowTitle } = i18nKeys;
 
@@ -52,7 +57,9 @@ export const HomePage = () => {
               <LinkContainer href={LINKEDIN_URL}>
                 <FontAwesomeIcon
                   icon='fa-brands fa-linkedin'
-                  style={{ color: '#0077b5' }}
+                  style={{
+                    color: activeTheme === 'light' ? light.linkedinIcon : dark.linkedinIcon,
+                  }}
                   size='2x'
                   cursor='pointer'
                   title='Linkedin'
@@ -62,7 +69,7 @@ export const HomePage = () => {
               <LinkContainer href={GITHUB_URL}>
                 <FontAwesomeIcon
                   icon='fa-brands fa-github'
-                  style={{ color: 'black' }}
+                  style={{ color: activeTheme === 'light' ? light.gitHubIcon : dark.gitHubIcon }}
                   size='2x'
                   cursor='pointer'
                   title='Github'

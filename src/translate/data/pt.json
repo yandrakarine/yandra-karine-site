@@ -2,12 +2,12 @@
   "experiencesPageTitle": "Experiências",
   "codeSkillsPageTitle": "Projetos",
   "contactRowTitle": "Perfis",
-  "language": "Idioma",
   "settingsPage": {
     "settingsPageTitle": "Configurações",
-    "idiom": "idioma",
+    "idiom": "Idioma",
     "portuguese": "Português",
-    "english": "Inglês"
+    "english": "Inglês",
+    "theme": "Tema"
   },
   "profileContent": {
     "myName": "Yandra Karine",

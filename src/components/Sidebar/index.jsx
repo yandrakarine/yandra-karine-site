@@ -19,6 +19,7 @@ import { LinkContainer } from '../common';
 import { i18n } from '../../translate/i18n';
 import { i18nKeys } from '../../constants';
 import { Link, useLocation } from 'react-router-dom';
+import { ToggleTheme } from '../ToggleTheme';
 
 const { profileContent, homeApresentation, settingsPage } = i18nKeys;
 
@@ -85,6 +86,7 @@ export const Sidebar = () => {
               />
             </LinkContainer>
           </ContactRow>
+          <ToggleTheme />
           <TranslateRow>
             <CountryFlag
               src={brazilIcon}

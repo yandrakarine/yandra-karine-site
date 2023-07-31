@@ -22,8 +22,8 @@ export const Wrapper = styled(Container)`
 export const PageTitle = styled.h1`
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
-  color: #2f2b55;
-  border-bottom: 2px solid #9b4f8a;
+  color: ${({ theme }) => theme.titleSecondary};
+  border-bottom: 2px solid ${({ theme }) => theme.titleTerciary};
 `;
 
 export const ProjectsCarousel = styled.div`
@@ -31,7 +31,7 @@ export const ProjectsCarousel = styled.div`
   border-radius: 0.5rem;
   max-width: 900px;
   max-height: 70%;
-  box-shadow: 3px 5px 10px 3px rgb(69 67 96 / 10%);
+  box-shadow: 3px 5px 10px 3px ${({ theme }) => theme.boxShadow};
   flex: 1;
   padding: 2rem;
   cursor: grab;
@@ -61,8 +61,8 @@ export const ProjectsCardsRow = styled.div`
 `;
 
 export const ProjectCard = styled(Container)`
-  box-shadow: 2px 5px 10px 2px rgb(69 67 96 / 10%);
-  background-color: #fff;
+  box-shadow: 2px 5px 10px 2px ${({ theme }) => theme.boxShadow};
+  background-color: ${({ theme }) => theme.bgCardColor};
   border-radius: 0.5rem;
   min-height: 200px;
   min-width: 400px;
@@ -111,7 +111,7 @@ export const ProjectAvatar = styled(Container)`
 
 export const ProjectTitle = styled.h2`
   margin-bottom: 2rem;
-  color: #353252;
+  color: ${({ theme }) => theme.titlePrimary};
 
   @media (${device.mobileL}) {
     margin-bottom: 1rem;

@@ -19,6 +19,8 @@ import {
   faRobot,
   faPeopleGroup,
   faGear,
+  faMoon,
+  faSun,
 } from '@fortawesome/free-solid-svg-icons';
 
 // adicionado na lib
@@ -40,4 +42,6 @@ library.add(
   faPeopleGroup,
   faGear,
   faNodeJs,
+  faMoon,
+  faSun,
 );

@@ -5,9 +5,10 @@
   "language": "Language",
   "settingsPage": {
     "settingsPageTitle": "Settings",
-    "idiom": "idiom",
+    "idiom": "Idiom",
     "portuguese": "Portuguese",
-    "english": "English"
+    "english": "English",
+    "theme": "Theme"
   },
   "profileContent": {
     "myName": "Yandra Karine",

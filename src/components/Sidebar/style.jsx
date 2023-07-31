@@ -8,7 +8,7 @@ export const Wrapper = styled.nav`
   justify-content: space-between;
   align-content: center;
   width: 9rem;
-  background: #2f2b55;
+  background: ${({ theme }) => theme.bgSidebar};
   padding: 2rem 0;
 
   @media (${device.mobileL}) {
