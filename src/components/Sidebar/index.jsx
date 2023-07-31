@@ -86,7 +86,7 @@ export const Sidebar = () => {
               />
             </LinkContainer>
           </ContactRow>
-          <ToggleTheme>toggle</ToggleTheme>
+          <ToggleTheme />
           <TranslateRow>
             <CountryFlag
               src={brazilIcon}
