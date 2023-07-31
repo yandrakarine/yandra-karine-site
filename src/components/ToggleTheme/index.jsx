@@ -1,7 +1,5 @@
 import Switch from 'react-switch';
-import moonIcon from '../../assets/icons/moon.svg';
-import sunIcon from '../../assets/icons/sun.svg';
-import { FixIcons, ThemeIcon } from './style';
+import { FixIcons } from './style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTheme } from '../../context/theme';
 import theme from '../../styles/themes';
@@ -24,7 +22,7 @@ export const ToggleTheme = () => {
         <FixIcons>
           <FontAwesomeIcon
             icon='fa-solid fa-sun'
-            style={{ color: 'yellow' }}
+            style={{ color: '#efd81d' }}
             size='xl'
             cursor='pointer'
             title='Light'
