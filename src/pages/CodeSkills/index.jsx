@@ -52,7 +52,7 @@ export const CodeSkillsPage = () => {
                     style={{ color: '#5e5c7f' }}
                     size='2x'
                     cursor='pointer'
-                    title='Ver no repositório'
+                    title='Visitar no repositório'
                   />
                 </LinkRow>
               </ProjectCard>
