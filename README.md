@@ -1,4 +1,4 @@
-# Yandra's Site 🔏
+# Yandra's Site 👩‍💻
 A responsive website for my portfolio.
 ## Introduction 📖
 This is a responsive website that I created to use as a portfolio showcasing my work and the projects I undertake.
