@@ -1,12 +1,15 @@
-# yandra-karine-site
-Um site responsivo para o meu portfólio
+# Yandra's Site 🔏
+A responsive website for my portfolio.
+## Introduction 📖
+This is a responsive website that I created to use as a portfolio showcasing my work and the projects I undertake.
 
-## 1.1 version
-Opções de configuração :wrench:
-<u>
-<li>Tema escuro/Dark mode</li>
-<li>Internacionalização/Translate(Pt-En)</li>
-</u>
+### 🛠 Technologies
+
+- I've used [React](https://react.dev/)
+
+### Configuration options :wrench:
+- Dark mode
+- Translate(Pt-En)
 
 ## web :desktop_computer:
 ![ezgif com-video-to-gif](https://github.com/yandrakarine/yandra-karine-site/assets/89264979/230df060-2cca-454e-8352-2fdf26662648)
